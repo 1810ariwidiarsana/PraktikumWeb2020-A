@@ -1,0 +1,103 @@
+<!-- Tugas Praktikum Oleh Ari Widiarsana 1808561010 -->
+<!-- Sintaks HTML 5 -->
+<!DOCTYPE html>
+<!-- Bahasa yg dipakai dan tag html-->
+<html lang="en">
+  <!-- tag head -->
+  <head>
+    <!--pengkodean dengan ketentuan charset UTF 8-->
+    <meta charset="UTF-8" />
+    <!--Untuk responsive dari html-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- untuk memuat icon yang ada di title  -->
+    <link rel="icon" href="img/icon.png">
+    <!-- untuk memanggil css di eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Untuk titile atau judul web -->
+    <title>Tugas Pertemuan 5</title>
+  </head>
+  <body>
+    <!-- membuat section header -->
+    <div class="header">
+      <h1>Halaman Pendaftaran</h1>
+      <h4>Pendaftaran sebagai peserta dalam RAKERWIL (Rapat Kerja Wilayah) Bali dan Nusa Tenggara 2020</h4>
+    </div>
+    <br>
+    <!-- membuat section isi -->
+    <div class="isi">
+      <form action="" method="post">
+        <!-- membuat section baris -->
+        <div class="baris">
+          <!-- membuat section kolom -->
+          <div class="kolom">
+            <!-- membuat inputan berupa text dan berisi kelas isi form -->
+            <input type="text" class="isi-form" name="namalengkap" placeholder="Nama Lengkap">
+          </div>
+          <div class="kolom">
+            <input type="text" class="isi-form" name="namapanggilan" placeholder="Nama Panggilan">
+          </div>
+        </div>
+        <div class="baris">
+          <div class="kolom">
+            <input type="text" class="isi-form" name="notlp" placeholder="No. Telepon">
+          </div>
+          <div class="kolom">
+            <input type="email" class="isi-form" name="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="baris">
+          <div class="kolom">
+            <input type="text" class="isi-form" name="ttl" placeholder="Tanggal Lahir">
+          </div>
+          <div class="kolom">
+            <input type="text" class="isi-form" name="tempatLahir" placeholder="Tempat Lahir">
+          </div>
+          <div class="kolom">
+            <!-- membuat select input agama -->
+            <select name="agama" class="isi-form">
+              <option selected disabled>Agama</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Islam">Islam</option>
+              <option value="Khatolik">Khatolik</option>
+              <option value="Protestan">Protestan</option>
+              <option value="Buddha">Buddha</option>
+              <option value="KongHuCu">KongHuCu</option>
+            </select>
+          </div>
+        </div>
+        <div class="baris">
+          <div class="kolom">
+            <input type="text" class="isi-form" name="universitas" placeholder="Universitas">
+          </div>
+          <div class="kolom">
+            <input type="text" class="isi-form" name="jurusan" placeholder="Fakultas/Jurusan">
+          </div>
+          <div class="kolom">
+            <input type="text" class="isi-form" name="jabatan" placeholder="Jabatan">
+          </div>
+        </div>
+        <div class="baris">
+          <div class="kolom">
+            <input type="text" class="isi-form" name="alamatAsal" placeholder="Alamat Asal">
+          </div>
+        </div>
+        <div class="baris">
+          <div class="kolom">
+            <!-- membuat label untuk input file -->
+            <label for="fotoAlmamater">Foto Almamater</label>
+            <br>
+            <input type="file" name="fotoAlmamater" id="">
+          </div>
+          <div class="kolom">
+            <!-- membuat label untuk input file -->
+            <label for="scanKtp">Scan KTP</label>
+            <br>
+            <input type="file" name="scanKtp" id="">
+          </div>
+          <div class="kolom"></div>
+        </div>
+        <button type="submit" class="tombol">Daftar</button>
+      </form>
+    </div>
+  </body>
+</html>
