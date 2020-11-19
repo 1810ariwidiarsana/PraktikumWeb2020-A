@@ -45,6 +45,4 @@ function kalkulator(operator)
             hasil = Math.pow(input1, input2);
             break;
     }
-    document.getElementById('operator').innerHTML = '' + input1 + operator + input2;
-    document.getElementById('nilai').innerHTML = hasil;
 }
