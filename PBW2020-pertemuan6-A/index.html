@@ -1,0 +1,39 @@
+<!-- Tugas Praktikum Oleh Ari Widiarsana 1808561010 -->
+<!-- Sintaks HTML 5 -->
+<!DOCTYPE html>
+<!-- Bahasa yg dipakai dan tag html-->
+<html lang="en">
+  <!-- tag head -->
+  <head>
+    <!--pengkodean dengan ketentuan charset UTF 8-->
+    <meta charset="UTF-8" />
+    <!--Untuk responsive dari html-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- untuk memuat icon yang ada di title  -->
+    <link rel="icon" href="img/icon.png">
+    <!-- untuk memanggil css di eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Untuk titile atau judul web -->
+    <title>Tugas Pertemuan 6 | Kalkulator</title>
+  </head>
+  <body>
+    <!-- membuat section isi -->
+    <div class="isi">
+        <input type="number" id="input1" class="inputan" placeholder="Masukkan angka pertama...">
+        <input type="number" id="input2" class="inputan" placeholder="Masukkan angka kedua...">
+        <div class="hasil">
+            <div id="operator"></div>
+            <div id="nilai"></div>
+        </div>
+        <div class="operatornya">
+            <button class="operatorBtn" id="operatorTambah">+</button>
+            <button class="operatorBtn" id="operatorKali">*</button>
+            <button class="operatorBtn" id="operatorMod">%</button>
+            <button class="operatorBtn" id="operatorKurang">-</button>
+            <button class="operatorBtn" id="operatorBagi">/</button>
+            <button class="operatorBtn" id="operatorPangkat">^</button>
+        </div>
+    </div>
+    <script src="jsnya.js"></script>
+  </body>
+</html>
