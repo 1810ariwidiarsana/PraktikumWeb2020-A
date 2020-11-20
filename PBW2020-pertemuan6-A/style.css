@@ -37,7 +37,7 @@ input[type="number"]::-webkit-input-placeholder {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(64, 85, 129);
+  background: rgb(57, 109, 73);
   border-radius: 50px;
 }
 
