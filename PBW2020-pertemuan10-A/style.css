@@ -1,0 +1,170 @@
+/* selector untuk semua dengan mengubah font dan tinggi nya */
+*,
+*::before,
+*::after {
+  /* untuk mengubah box sizing menjadi border box */
+  box-sizing: border-box;
+}
+
+body {
+  /* mengubah margin default menjadi 0 (tidak ada margin, agar gambar bisa full) */
+  margin: 0;
+  /* mengubah font default */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* mengubah font size default menjadi 1rem */
+  font-size: 1rem;
+  /* mengubah ketebalan font default menjadi 400 */
+  font-weight: 400;
+  /* mengubah linespacing menjadi 1.5 */
+  line-height: 1.5;
+  /* mengganti warna teksdefault menjadi agak abu */
+  color: #212529;
+  /* mengubah text-align default ke kiri semua */
+  text-align: left;
+}
+
+h1,
+h4 {
+  /* mengubah margin atas menjadi 0 */
+  margin-top: 0;
+  /* mengubah margin bawah menjadi 0.5rem */
+  margin-bottom: 0.5rem;
+  /* mengubah line spacing h1 dan h4 menjadi 1.2 */
+  line-height: 1.2;
+}
+
+h1 {
+  /* mengubah ukuran font */
+  font-size: 2.5rem;
+}
+h4 {
+  /* mengubah ukuran font */
+  font-size: 1.5rem;
+}
+
+.header {
+  /* mengubah ukuran tinggi header menjadi 250px */
+  min-height: 250px;
+  /* memberi background */
+  background-image: url("img/oke.jpg");
+  /* agar gambar lebih presisi dengan layout */
+  background-size: cover;
+  /* supaya letak gambar fixed meskipun di scroll */
+  background-attachment: fixed;
+  /* mengubah warna text pada header menjadi putih */
+  color: white;
+}
+
+.header h1 {
+  /* mengubah ketebalan font */
+  font-weight: 400;
+  /* memberikan padding agar lebih ke tengah */
+  padding: 70px 0px 0px 130px;
+}
+.header h4 {
+  /* mengubah ketebalan font */
+  font-weight: 100;
+  /* memberikan padding agar lebih ke tengah */
+  padding: 0px 0px 50px 130px;
+}
+
+/* selector untuk content agar content yang ada lebih menjorok ke dalam dengan padding, dan margin berfungsi agar responsive */
+.isi {
+  width: 100%;
+  padding-right: 150px;
+  padding-left: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.baris {
+  /* display flex digunakan untuk pengaturan konten dinamis , seperti namanya yaitu flex (flexible)*/
+  display: flex;
+  /* flex-wrap digunakan untuk mendefinisikan bahwa elemen item di dalam flexbox tidak harus disejajarkan dalam satu baris. Msksudnya, elemen item tersebut dipindahkan ke baris baru bila sudah memenuhi lebar flexboxnya. */
+  flex-wrap: wrap;
+  /* untuk menggeser sedikit ke kiri dan ke kanan */
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.kolom {
+  /* flex basis digunakan untuk mendifinisikan panjang dari flex itemnya */
+  flex-basis: 0;
+  /* flex grow berfungsi untuk mengatur ukuran berdasarkan seberapa besar space kosong yang akan diambil dari flex-container */
+  flex-grow: 1;
+  /* untuk set minimal dan maximal widthnya */
+  min-width: 0;
+  max-width: 100%;
+  /* position relative agar bisa memindahkan item dengan left, top, padding, dll */
+  position: relative;
+  /* memberikan padding kanan dan kiri */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.isi-form {
+  /* membuat blok baru pada tampilan, artinya elemen ini akan memenuhi container yang disediakan */
+  display: block;
+  /* mengatur panjangnya */
+  width: 100%;
+  /* mengatur tingginya */
+  height: 2.5rem;
+  /* mengatur padding agar menjorok kedalam */
+  padding: 0.375rem 0.75rem;
+  /* mengatur jarak kebawah */
+  margin-bottom: 15px;
+  /* mengatur font size, ketebalan, line spacing, dan juga warnanya */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  /* untuk mengubah warna background dan juga seberapa besar warna itu menutupi, padding-box artinya sampai dengan padding saja */
+  background-color: #fff;
+  background-clip: padding-box;
+  /* memberi border */
+  border: 1px solid #ced4da;
+  /* digunakan untuk agar ujung border tidak lancip (kotak) */
+  border-radius: 0.25rem;
+  /* transition ini untuk efek yang ada, dimana efek yg ada sekarang adalah ketika di fokus (di klik) */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* ketika isi form di fokus atau cursor mouse pindah ke sana (di klik) */
+.isi-form:focus {
+  /* memberikan warna abu dan warna background putih, dan memberikan warna border biru  */
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  /* agar garisnya tidak ada , dan memberikan efek shadow */
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.tombol {
+  /* memberikan margin top */
+  margin-top: 1.5rem;
+  /* ketika di hover maka cursor akan berubah menjadi pointer atau gambar tangan */
+  cursor: pointer;
+  /* mengubah warna dari tombolnya agar menjadi hijau dan tulisannya putih */
+  color: #fff;
+  background-color: green;
+  border-color: green;
+  /* agar bordernya transparant, karena kalau tidak isi maka ada hitam2nya sedikti */
+  border: 1px transparent;
+  font-size: 1rem;
+  /* memberikan padding agar lebih besar */
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
