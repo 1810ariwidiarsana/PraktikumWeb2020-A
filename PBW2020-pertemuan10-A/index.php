@@ -2,8 +2,13 @@
 if (isset($_POST['daftar'])) {
     $nama = amankan($_POST['nama']);
     $nim = amankan($_POST['nim']);
+    if ($nama == '') {
+        echo "<script>alert('Silahkan masukkan Nama'); window.history.back(); </script>";
+        die;
+    }
     $nilai1 = intval(amankan($_POST['nilai1']));
     $nilai2 = intval(amankan($_POST['nilai2']));
+
     if ($nilai1 > 100 || $nilai1 < 0) {
         echo "<script>alert('Silahkan masukkan nilai 1 antara 0-100'); window.history.back(); </script>";
         die;
