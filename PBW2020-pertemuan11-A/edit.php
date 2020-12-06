@@ -8,6 +8,8 @@ function amankan($data)
     $data = htmlspecialchars($data); //ilangin tag html
     return $data;
 }
+if (!isset($_SESSION['username']))
+    header('Location: login.php');
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM mahasiswa WHERE id = '$id'";
