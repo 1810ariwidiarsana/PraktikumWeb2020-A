@@ -15,8 +15,9 @@ if (isset($_POST['tambahdata'])) {
     if ($stmt->execute()) {
         echo '<script> alert("Berhasil nambah data") </script>';
     } else {
-        echo '<script> alert("Gagal nambah data") </script>';
+        echo '<script> alert("Gagal nambah data karena ' . $stmt->error . '") </script>';
     }
+    $stmt->close();
 }
 
 $s = "SELECT * FROM mahasiswa";

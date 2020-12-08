@@ -8,6 +8,7 @@ function amankan($data)
     $data = htmlspecialchars($data); //ilangin tag html
     return $data;
 }
+session_start();
 if (!isset($_SESSION['username']))
     header('Location: login.php');
 if (isset($_GET['id'])) {
@@ -50,6 +51,7 @@ if (isset($_POST['editdata'])) {
     if ($stmt->execute()) {
         echo '<script> alert("Berhasil Edit data"); window.location.href = "index.php"; </script>';
     } else {
-        echo '<script> alert("Gagal edit data"); window.location.href = "index.php"; </script>';
+        echo '<script> alert("Gagal edit data karena ' . $stmt->error .  '"); window.location.href = "index.php"; </script>';
     }
+    $stmt->close();
 }
